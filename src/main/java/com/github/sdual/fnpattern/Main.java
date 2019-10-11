@@ -5,7 +5,6 @@ import com.github.sdual.fnpattern.data.Variable1;
 import com.github.sdual.fnpattern.data.Variable2;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import com.google.inject.Key;
 
 public class Main {
 
@@ -13,9 +12,7 @@ public class Main {
 
     Injector injector = Guice.createInjector(new BindingModule());
     // Create a composed function by using dependency injection.
-   ComposedFunction composedFunc =
-        injector.getInstance(new Key<ComposedFunction>(){});
-
+    ComposedFunction composedFunc = injector.getInstance(ComposedFunction.class);
 
     Variable2<Integer> input1 = new Variable2<>(1, 3);
 
