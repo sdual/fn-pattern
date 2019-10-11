@@ -3,7 +3,7 @@ package com.github.sdual.fnpattern.function;
 import com.github.sdual.fnpattern.data.Variable1;
 import com.github.sdual.fnpattern.data.Variable2;
 
-public class IntegerAdder implements FunctionVariable2To1 {
+public class IntegerAdder implements Variable2To1Function {
 
   private Variable1<Integer> add(Variable2<Integer> input) {
     return new Variable1<>(input.getVal1() + input.getVal2());
